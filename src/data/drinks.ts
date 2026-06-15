@@ -2,7 +2,7 @@
 // This is the single source of truth — add/edit drinks only here.
 
 export type Temp = "heiss" | "kalt" | "sonder";
-export type Machine = "siebträger" | "switch" | "instant";
+export type Machine = "siebträger" | "switch" | "instant" | "glas";
 export type Prep = "sofort" | "vorbereitung";
 
 export interface Drink {
@@ -92,8 +92,8 @@ export const drinks: Drink[] = [
   },
   {
     id: 15, name: "Cold Brew", group: "Kalt · Schwarz",
-    temp: "kalt", milk: false, machines: ["switch"], prep: "vorbereitung",
-    howto: "1:8 Verhältnis, Switch geschlossen lassen, 12–16h im Kühlschrank. Dann öffnen, durchlaufen lassen. Weich, wenig Säure, keine Bitterkeit.",
+    temp: "kalt", milk: false, machines: ["switch", "glas"], prep: "vorbereitung",
+    howto: "Kaffee grob mahlen (gröber als Pour Over), 1:8 mit kaltem Wasser in ein Einmachglas. Deckel drauf, 12–16h im Kühlschrank. Danach durch den Switch mit Papierfilter filtern — gibt einen sauberen Cold Brew ohne Fines und Öle.",
   },
   {
     id: 16, name: "Espresso Tonic", group: "Kalt · Schwarz",
@@ -161,4 +161,5 @@ export const MACHINE_LABELS: Record<Machine, string> = {
   "siebträger": "Siebträger",
   "switch":     "V60 Switch",
   "instant":    "Instant",
+  "glas":       "Einmachglas",
 };

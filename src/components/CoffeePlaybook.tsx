@@ -58,7 +58,7 @@ export default function CoffeePlaybook() {
             Coffee Playbook
           </h1>
           <p style={{ margin: 0, color: "#8A8781", fontSize: 14 }}>
-            {filtered.length} von {drinks.length} Drinks · Siebträger + V60 Switch + Instant
+            {filtered.length} von {drinks.length} Drinks
           </p>
         </div>
       </div>
@@ -89,6 +89,7 @@ export default function CoffeePlaybook() {
               { val: "siebträger" as const, label: "Siebträger" },
               { val: "switch" as const,     label: "V60 Switch" },
               { val: "instant" as const,    label: "Instant" },
+              { val: "bialetti" as const,   label: "Bialetti" },
             ].map(o => <FilterBtn key={o.val} active={filters.machine === o.val} onClick={() => setFilter("machine", o.val)}>{o.label}</FilterBtn>)}
             <div style={{ width: 1, height: 18, background: "#C8C5C0", margin: "0 4px" }} />
             <span style={{ fontSize: 11, fontWeight: 600, color: "#9A9793", textTransform: "uppercase", letterSpacing: "0.08em", marginRight: 2 }}>Zeit</span>

@@ -60,6 +60,11 @@ export const drinks: Drink[] = [
     howto: "Doppelter Ristretto + wenig Milch, kaum Schaum. Konzentrierter als Latte, kleiner als Cappuccino. Ursprünglich aus Australien.",
   },
   {
+    id: 29, name: "Cortado", group: "Heiß · Mit Milch",
+    temp: "heiss", milk: true, machines: ["siebträger"], prep: "sofort",
+    howto: "Espresso 1:1 mit leicht aufgeschäumter Milch — genug um die Säure zu mildern, wenig genug um den Kaffeegeschmack zu behalten. Kleines Glas, kein Latte Art, kein Schaum-Theater.",
+  },
+  {
     id: 9, name: "Latte", group: "Heiß · Mit Milch",
     temp: "heiss", milk: true, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Espresso + 150–200ml aufgeschäumte Milch. Mild, groß. Klassiker für Latte Art.",

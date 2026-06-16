@@ -1,7 +1,7 @@
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 // This is the single source of truth — add/edit drinks only here.
 
-export type Temp = "heiss" | "kalt" | "sonder";
+export type Temp = "heiss" | "kalt";
 export type Machine = "siebträger" | "switch" | "instant" | "glas" | "bialetti";
 export type Prep = "sofort" | "vorbereitung";
 
@@ -159,8 +159,8 @@ export const drinks: Drink[] = [
   },
   // ── SONDER ──────────────────────────────────────────────────────────────────
   {
-    id: 25, name: "Affogato", group: "Sonder",
-    temp: "sonder", milk: false, machines: ["siebträger", "bialetti"], prep: "sofort",
+    id: 25, name: "Affogato", group: "Kalt · Mit Milch",
+    temp: "kalt", milk: true, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Kugel Vanilleeis in ein Glas, heißen Espresso direkt drüber gießen. Nicht umrühren — heiß trifft kalt trifft bitter trifft süß.",
   },
 ];
@@ -170,7 +170,6 @@ export const drinks: Drink[] = [
 export const TEMP_COLORS: Record<Temp, { dot: string; border: string; label: string }> = {
   heiss: { dot: "#D4522A", border: "#FDDFD6", label: "Heiß" },
   kalt:  { dot: "#2D7BA5", border: "#D6EAF5", label: "Kalt" },
-  sonder:{ dot: "#7C5CBF", border: "#EBE4F8", label: "Sonder" },
 };
 
 export const MACHINE_LABELS: Record<Machine, string> = {

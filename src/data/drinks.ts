@@ -2,7 +2,7 @@
 // This is the single source of truth — add/edit drinks only here.
 
 export type Temp = "heiss" | "kalt" | "sonder";
-export type Machine = "siebträger" | "switch" | "instant" | "glas";
+export type Machine = "siebträger" | "switch" | "instant" | "glas" | "bialetti";
 export type Prep = "sofort" | "vorbereitung";
 
 export interface Drink {
@@ -30,12 +30,12 @@ export const drinks: Drink[] = [
   },
   {
     id: 3, name: "Americano", group: "Heiß · Schwarz",
-    temp: "heiss", milk: false, machines: ["siebträger"], prep: "sofort",
+    temp: "heiss", milk: false, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Heißes Wasser in die Tasse, Espresso langsam drüber gießen. Nicht andersrum — die Crema bleibt oben.",
   },
   {
     id: 4, name: "Aerocano", group: "Heiß · Schwarz",
-    temp: "heiss", milk: false, machines: ["siebträger"], prep: "sofort",
+    temp: "heiss", milk: false, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Wasser mit der Dampflanze erhitzen und dabei leicht texturieren, dann mit dem Espresso kombinieren. Die Dampflanze erzeugt feine Mikrobläschen im Wasser — das Ergebnis ist seidiger und runder als wenn man einfach heißes Wasser dazugießt.",
   },
   {
@@ -51,7 +51,7 @@ export const drinks: Drink[] = [
   // ── HEISS · MIT MILCH ───────────────────────────────────────────────────────
   {
     id: 7, name: "Cappuccino", group: "Heiß · Mit Milch",
-    temp: "heiss", milk: true, machines: ["siebträger"], prep: "sofort",
+    temp: "heiss", milk: true, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Espresso + gleichviel Milchschaum. Dampflanze: kalte Milch, erst Textur aufbauen, dann Temperatur. 55–65 °C.",
   },
   {
@@ -61,12 +61,12 @@ export const drinks: Drink[] = [
   },
   {
     id: 9, name: "Latte", group: "Heiß · Mit Milch",
-    temp: "heiss", milk: true, machines: ["siebträger"], prep: "sofort",
+    temp: "heiss", milk: true, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Espresso + 150–200ml aufgeschäumte Milch. Mild, groß. Klassiker für Latte Art.",
   },
   {
     id: 10, name: "Macchiato", group: "Heiß · Mit Milch",
-    temp: "heiss", milk: true, machines: ["siebträger"], prep: "sofort",
+    temp: "heiss", milk: true, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Espresso mit einem Löffel Milchschaum obendrauf. «Gefleckt» — mehr Markierung als Milchdrink.",
   },
   {
@@ -82,7 +82,7 @@ export const drinks: Drink[] = [
   },
   {
     id: 13, name: "Iced Americano", group: "Kalt · Schwarz",
-    temp: "kalt", milk: false, machines: ["siebträger"], prep: "sofort",
+    temp: "kalt", milk: false, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Glas mit Eis füllen, kaltes Wasser rein, Doppio langsam drüber gießen. Simpelster Cold Drink, oft unterschätzt.",
   },
   {
@@ -118,7 +118,7 @@ export const drinks: Drink[] = [
   },
   {
     id: 20, name: "Iced Latte", group: "Kalt · Mit Milch",
-    temp: "kalt", milk: true, machines: ["siebträger"], prep: "sofort",
+    temp: "kalt", milk: true, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Glas mit Eis, kalte Milch rein, Espresso langsam drüber gießen. Das Fundament aller Milch-Cold-Drinks.",
   },
   {
@@ -141,10 +141,26 @@ export const drinks: Drink[] = [
     temp: "kalt", milk: true, machines: ["instant"], prep: "sofort",
     howto: "2 EL Instant + 2 EL Zucker + 2 EL heißes Wasser aufschlagen bis cremige, glänzende Masse entsteht. Über kalter Milch und Eis servieren.",
   },
+  // ── BIALETTI ────────────────────────────────────────────────────────────────
+  {
+    id: 26, name: "Moka", group: "Heiß · Schwarz",
+    temp: "heiss", milk: false, machines: ["bialetti"], prep: "sofort",
+    howto: "Bialetti mit Wasser bis zum Ventil füllen, Siebeinsatz mit mittelfein gemahlenem Kaffee füllen, nicht pressen. Auf mittlerer Hitze erhitzen bis es gluckert, sofort von der Platte nehmen.",
+  },
+  {
+    id: 27, name: "Caffè Corretto", group: "Heiß · Schwarz",
+    temp: "heiss", milk: false, machines: ["bialetti"], prep: "sofort",
+    howto: "Heißen Moka mit einem Schuss Grappa, Sambuca oder Cognac «korrigieren». Klassischer italienischer Absacker nach dem Essen.",
+  },
+  {
+    id: 28, name: "Moka Shakerato", group: "Kalt · Schwarz",
+    temp: "kalt", milk: false, machines: ["bialetti"], prep: "sofort",
+    howto: "Moka brühen, sofort in ein Glas mit viel Eis geben, 15–20 Sek. schütteln. Gleiche Idee wie Freddo Espresso, nur mit Moka als Basis — weniger Schaum, dafür rundere Süße.",
+  },
   // ── SONDER ──────────────────────────────────────────────────────────────────
   {
     id: 25, name: "Affogato", group: "Sonder",
-    temp: "sonder", milk: false, machines: ["siebträger"], prep: "sofort",
+    temp: "sonder", milk: false, machines: ["siebträger", "bialetti"], prep: "sofort",
     howto: "Kugel Vanilleeis in ein Glas, heißen Espresso direkt drüber gießen. Nicht umrühren — heiß trifft kalt trifft bitter trifft süß.",
   },
 ];
@@ -162,4 +178,5 @@ export const MACHINE_LABELS: Record<Machine, string> = {
   "switch":     "V60 Switch",
   "instant":    "Instant",
   "glas":       "Einmachglas",
+  "bialetti":   "Bialetti",
 };

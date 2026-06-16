@@ -115,6 +115,11 @@ export const drinks: Drink[] = [
     temp: "kalt", milk: false, machines: ["instant"], prep: "sofort",
     howto: "1–2 TL Instant + 2 TL Zucker + Spritzer Wasser, Frappé-Mixer bis dichter, stabiler Schaum entsteht (~30 Sek.). Eis dazu. Nur mit Instant möglich.",
   },
+  {
+    id: 31, name: "Geklärter Cold Brew", group: "Kalt · Schwarz",
+    temp: "kalt", milk: false, machines: ["switch"], prep: "vorbereitung",
+    howto: "Zwei Methoden: (1) Milk Punch – Cold Brew mit Zitronensäure ansäuern, in heiße Milch geben, ausflocken lassen, durch Käsetuch + Kaffeefilter abtropfen (~1h aktiv, 5–7 Tage haltbar). (2) Agar-Gefrier-Schmelz – Cold Brew mit 0,3% Agar kurz aufkochen, gelieren, einfrieren, langsam über Käsetuch auftauen lassen (16–20h Vorlauf, glasklar, ~2 Wochen haltbar). Beide entfernen Trübstoffe & Bitterstoffe, Koffein bleibt erhalten. Basis für Café Suspendu (klare Variante) oder pur über Eis.",
+  },
   // ── KALT · MIT MILCH ────────────────────────────────────────────────────────
   {
     id: 19, name: "Freddo Cappuccino", group: "Kalt · Mit Milch",
@@ -145,6 +150,11 @@ export const drinks: Drink[] = [
     id: 24, name: "Dalgona", group: "Kalt · Mit Milch",
     temp: "kalt", milk: true, machines: ["instant"], prep: "sofort",
     howto: "2 EL Instant + 2 EL Zucker + 2 EL heißes Wasser aufschlagen bis cremige, glänzende Masse entsteht. Über kalter Milch und Eis servieren.",
+  },
+  {
+    id: 30, name: "Café Suspendu", group: "Kalt · Mit Milch",
+    temp: "kalt", milk: true, machines: ["switch"], prep: "vorbereitung",
+    howto: "Bi-thermale Split-Extraktion: gleiche Bohne einmal heiß im Switch (offen, 92°C, normaler Pour-over) und einmal kalt im Switch (Ventil zu, 14h Kühlschrank) extrahieren. Kalt-Extrakt carbonisieren, über Eis als untere Schicht ins Glas. Heiß-Extrakt mit geschmolzener Praliné/Kakaobutter + Sahne aufschäumen, langsam über einen Barlöffel obenauf gießen – schwebt durch Dichte-/Temperaturunterschied. Mit Zitronenzeste & Basilikum/Shiso garnieren. Tipp: Kalt-Extrakt vorher klären (siehe «Geklärter Cold Brew») für eine glasklare statt trübe Fizz-Schicht.",
   },
   // ── BIALETTI ────────────────────────────────────────────────────────────────
   {
